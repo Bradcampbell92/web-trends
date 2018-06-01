@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+#main-menu ul {
+    list-style: none;
+    padding: 0;
+}
+#main-menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.dd1
+{
+    display: none;
+    position: absolute;
+	width:70px;
+    z-index: 1;
+}
+.dd2
+{
+    display: none;
+    position: absolute;
+    width: 160.5px;
+    right: -150px;
+    top: 36px;
+    z-index: 1;
+}
+
+.link1:hover .dd1
+{
+    display: block;
+}
+.sub3:hover .dd2
+{
+    display: block;
+}
+
