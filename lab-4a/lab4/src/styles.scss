@@ -1,0 +1,64 @@
+//font sizes
+$big-font: 25px;
+$med-font: 18px;
+$small-font: 14px;
+
+//colours
+$lightgrey: lightgrey;
+li
+{
+    list-style-type: none;
+    &:hover{
+        background-color: $lightgrey;
+    }
+}
+header
+{
+    nav
+    {
+        .links
+        {
+            font-size: $big-font;
+
+            > li
+            {
+                display: inline;
+                position: relative;
+                
+                > .nested-links
+                {
+                    display: none;
+                    padding-left: 0;
+                    position: absolute;
+                    left: 0;
+                    font-size: $med-font;
+                    width: 150%;
+
+                    > li
+                    {
+                        position: relative;
+                        .sublinks
+                        {
+                            display: none;
+                            position: absolute;
+                            top: 0;
+                            font-size: $small-font;
+                            width: 200%;
+                            left: 100%;
+
+                        }
+                        &:hover > .sublinks
+                        {
+                            display: block;
+                        }
+                    }
+                }
+
+                &:hover > .nested-links
+                {
+                    display: block;
+                }
+            }
+        }
+    }
+}
