@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Person } from './person'
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,16 @@ export class PeopleService {
     {id: 2, firstName: 'Bernie', lastName: 'Monette', dateOfBirth: new Date('01/01/1955')},
     {id: 3, firstName: 'Sean', lastName: 'Doyle', dateOfBirth: new Date('01/01/1970')}
   ];
+
+  getPeople(): Observable<Person[]>
+  {
+    return of(this.people);
+  }
+
+  getOtherPeople(): Observable<Person[]>
+  {
+    return of(this.people);
+  }
 
   constructor() { }
 }
