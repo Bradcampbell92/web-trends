@@ -3,3 +3,7 @@
     {{ g.firstName }} {{ g.lastName }} {{ g.dateOfBirth }}
   </div>
 </div>
+
+<input [(ngModel)]="guestSearch.firstName">
+<button (click)="findPeople(guestSearch)"> Search </button>
+<div>{{ guestSearch.firstName}}</div>

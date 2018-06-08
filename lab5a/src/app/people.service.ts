@@ -18,8 +18,21 @@ export class PeopleService {
     return of(this.people);
   }
 
-  getOtherPeople(): Observable<Person[]>
+  getOtherPeople(person?: Person): Observable<Person[]>
   {
+    if(person)
+    {
+      let results: Person[] = [];
+
+      for(let p of this.people)
+      {
+        if(person.firstName.toLowerCase() === p.firstName.toLowerCase())
+        {
+          results.push(p);  
+        }
+      }
+      return of(results);
+    }
     return of(this.people);
   }
 
